@@ -1,0 +1,6 @@
+<%= @user.email %>
+<%= form_for :user, url: "/passwords/#{@user.code}" do |f| %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "Update" %>
+<% end %>

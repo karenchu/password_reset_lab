@@ -1,0 +1,10 @@
+Welcome, <%= current_user.email %>!.
+
+<ul>
+<% @current_user.articles.each do |article| %>
+
+  <li><%= article.title %></li>
+
+  <% end %>
+
+</ul> 

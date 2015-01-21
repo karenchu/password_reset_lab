@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nonsense</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="/">Nonsense</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active" id="link"><a href="/articles/new">New Post<span class="sr-only">(current)</span></a></li>
+	      </ul>
+ 
+		<ul class="nav navbar-nav navbar-right">
+			<li id="link"><a href="/login">Login</a></li>
+			<li id="link"><a href="/sign_up">Signup</a></li>
+		</ul>
+
+	    </div>
+	  </div>
+	</nav>
+
+<%= yield %>
+
+</body>
+</html>

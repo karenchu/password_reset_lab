@@ -1,0 +1,29 @@
+<div>
+  <div class="article-content">
+  	<h1><%= @article.title %></h1>
+  
+    <%= link_to "EDIT", edit_article_path(@article) %><br>
+    <br>
+		<% @article.content.split("\n").each do |p| %>
+    <p><%= p %></p> 
+    <% end %>
+
+    <div>
+      <% @keywordResults %>
+      <h2>Keywords</h2>
+    </div>
+
+    <div>
+      <% @keywordResults.each do |keyword| %>
+      <%= keyword["text"] %>
+      <% end %>
+    </div>
+  </div>
+
+  <nav>
+    <ul class="pager">
+      <li><a href="#">Previous</a></li>
+      <li><a href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
